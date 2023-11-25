@@ -26,8 +26,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Set executable permissions
       run: |
-        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0
-        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0/selenium-manager/linux/selenium-manager
+        chmod 777 -R /home/runner/work/MWOProjekt/MWOProjekt
 
     - name: Run the program
       run: /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0/YourProgramName
