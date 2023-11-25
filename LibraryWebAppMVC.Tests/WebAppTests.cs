@@ -48,6 +48,9 @@ namespace LibraryWebAppMVC.Tests
         {
             Driver.Navigate().GoToUrl(APP_URL + "/Create");
             Thread.Sleep(1000);
+            Console.WriteLine("Redirected to /create");
+            Console.WriteLine("Title: ", Driver.Title);
+            Console.WriteLine("Content: " + Driver.PageSource.ToString());
             Driver.FindElement(By.CssSelector("#Title")).SendKeys("TestTitle");
             Driver.FindElement(By.CssSelector("#Author")).SendKeys("TestAuthor");
             Driver.FindElement(By.CssSelector("#Description")).SendKeys("TestDescription");
