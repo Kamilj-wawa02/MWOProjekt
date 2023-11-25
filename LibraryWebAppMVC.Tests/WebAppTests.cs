@@ -17,23 +17,24 @@ namespace LibraryWebAppMVC.Tests
         [TestInitialize]
         public void Initialize()
         {
-            //ChromeOptions option = new ChromeOptions();
-            //option.AddArguments("--headless");
-            ////option.AddArgument("--remote-debugging-port=9222");
-            //option.AddArgument("--whitelisted-ips");
-            ////new DriverManager().SetUpDriver(new ChromeConfig());
-            //Console.WriteLine("Setup chrome Driver...");
-            //Driver = new ChromeDriver(option);
-            //Thread.Sleep(2000);
+            ChromeOptions option = new ChromeOptions();
+            option.AddArguments("--headless");
+            //option.AddArgument("--remote-debugging-port=9222");
+            option.AddArgument("--whitelisted-ips");
+            //new DriverManager().SetUpDriver(new ChromeConfig());
+            Console.WriteLine("Setup chrome Driver...");
+            Driver = new ChromeDriver(option);
+            Thread.Sleep(2000);
 
 
-
+            /*
             FirefoxOptions options = new FirefoxOptions();
             options.AddArguments("--headless", "--setpref=network.dns.blockDotOnion=false");
             Console.WriteLine("Setup Firefox Driver...");
             Driver = new FirefoxDriver(options);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Thread.Sleep(2000);
+            */
         }
 
         [TestCleanup]
