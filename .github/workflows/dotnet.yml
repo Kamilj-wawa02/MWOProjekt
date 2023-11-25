@@ -28,5 +28,16 @@ jobs:
       run: |
         chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0
         chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0/selenium-manager/linux/selenium-manager
-    - name: Test
-      run: dotnet test --verbosity normal
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup .NET for test
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies for test
+      run: dotnet restore
+    - name: Run tests in the background
+      run: dotnet test --no-restore --verbosity normal
