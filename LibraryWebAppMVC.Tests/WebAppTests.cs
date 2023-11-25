@@ -16,7 +16,7 @@ namespace LibraryWebAppMVC.Tests
         public void Initialize()
         {
             ChromeOptions option = new ChromeOptions();
-            option.AddArguments("--headless");
+            //option.AddArguments("--headless");
             new DriverManager().SetUpDriver(new ChromeConfig());
             Console.WriteLine("Setup");
             Driver = new ChromeDriver(option);
