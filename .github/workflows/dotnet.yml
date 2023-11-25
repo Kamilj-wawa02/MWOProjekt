@@ -24,5 +24,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Set executable permissions
+      run: chmod +x /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0
     - name: Test
       run: dotnet test --verbosity normal
