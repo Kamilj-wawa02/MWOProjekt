@@ -29,7 +29,7 @@ jobs:
         chmod 777 -R /home/runner/work/MWOProjekt/MWOProjekt
 
     - name: Run the program
-      run: /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0/YourProgramName
+      run: dotnet run --project /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC
 
     - name: Test
       run: dotnet test --verbosity normal
