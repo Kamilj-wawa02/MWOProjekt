@@ -29,7 +29,7 @@ namespace LibraryWebAppMVC.Tests
 
 
             FirefoxOptions options = new FirefoxOptions();
-            options.AddArguments("--headless");
+            options.AddArguments("--headless", "--marionette", "--setpref=network.dns.blockDotOnion=false");
             Console.WriteLine("Setup Firefox driver...");
             Driver = new FirefoxDriver(options);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
