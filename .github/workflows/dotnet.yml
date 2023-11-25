@@ -33,7 +33,7 @@ jobs:
       run: dotnet publish -c Release --no-restore -o /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release
 
     - name: Run the program in the background
-      run: nohup /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release/LibraryWebAppMVC.Client.exe
+      run: nohup /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release/net7.0/LibraryWebAppMVC.Client.exe
 
     - name: Test
       run: dotnet test --verbosity normal
