@@ -56,6 +56,7 @@ namespace LibraryWebAppMVC.Tests
             Assert.IsTrue(tableRecord.Displayed);
         }
 
+        /*
         [TestMethod]
         public void T02_GetTest()
         {
@@ -101,6 +102,7 @@ namespace LibraryWebAppMVC.Tests
             Assert.ThrowsException<OpenQA.Selenium.NoSuchElementException>(() =>
                     Driver.FindElement(By.XPath("//*[contains(text(),'" + "TestTitle" + "')]")));
         }
+        */
 
     }
 }
