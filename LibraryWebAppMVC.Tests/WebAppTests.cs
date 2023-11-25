@@ -20,6 +20,7 @@ namespace LibraryWebAppMVC.Tests
             new DriverManager().SetUpDriver(new ChromeConfig());
             Console.WriteLine("Setup");
             Driver = new ChromeDriver(option);
+            Thread.Sleep(2000);
         }
 
         [TestCleanup]
