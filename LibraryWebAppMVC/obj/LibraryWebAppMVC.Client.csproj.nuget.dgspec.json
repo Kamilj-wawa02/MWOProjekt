@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj": {}
+    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj": {}
   },
   "projects": {
-    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj": {
+    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj",
+        "projectUniqueName": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj",
         "projectName": "LibraryWebAppMVC.Client",
-        "projectPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj",
+        "projectPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj",
         "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC\\obj\\",
+        "outputPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
