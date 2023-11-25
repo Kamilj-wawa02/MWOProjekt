@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
@@ -17,6 +18,7 @@ namespace LibraryWebAppMVC.Tests
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("--headless");
+            option.AddArgument("--remote-debugging-port=9222");
             new DriverManager().SetUpDriver(new ChromeConfig());
             Console.WriteLine("Setup chrome driver...");
             Driver = new ChromeDriver(option);
