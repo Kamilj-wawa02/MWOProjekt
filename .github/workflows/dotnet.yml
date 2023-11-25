@@ -28,8 +28,12 @@ jobs:
       run: |
         chmod 777 -R /home/runner/work/MWOProjekt/MWOProjekt
 
-    - name: Run the program
-      run: dotnet run --project /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC
+    
+    - name: Publish the program
+      run: dotnet publish -c Release --no-restore -o /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release
+
+    - name: Run the program in the background
+      run: nohup /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release/LibraryWebAppMVC.Client.exe
 
     - name: Test
       run: dotnet test --verbosity normal
