@@ -12,8 +12,9 @@ namespace LibraryWebAppMVC.Tests
         [TestInitialize]
         public void Initialize()
         {
-            driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(APP_URL);
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArgument("--headless");
+            driver = new ChromeDriver(chromeOptions);
         }
 
         [TestCleanup]
