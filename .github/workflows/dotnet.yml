@@ -34,6 +34,5 @@ jobs:
 
     - name: Run the program in the background
       run: nohup /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release/net7.0/LibraryWebAppMVC.Client.exe
-
     - name: Test
       run: dotnet test --verbosity normal
