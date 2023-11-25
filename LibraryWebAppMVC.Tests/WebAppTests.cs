@@ -47,7 +47,9 @@ namespace LibraryWebAppMVC.Tests
         public void T01_CreateTest()
         {
             Driver.Navigate().GoToUrl(APP_URL + "/Create");
-            Thread.Sleep(1000);
+            Console.WriteLine("Aktualna data i czas: " + DateTime.Now.ToString());
+            Thread.Sleep(2000);
+            Console.WriteLine("Aktualna data i czas2: " + DateTime.Now.ToString());
             Console.WriteLine("Redirected to /create");
             Console.WriteLine("URL: ", Driver.Url.ToString());
             Console.WriteLine("Content: " + Driver.PageSource.ToString());
