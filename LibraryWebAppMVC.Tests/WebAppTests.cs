@@ -15,11 +15,11 @@ namespace LibraryWebAppMVC.Tests
         [TestInitialize]
         public void Initialize()
         {
-            //ChromeOptions option = new ChromeOptions();
-            //option.AddArguments("--headless");
+            ChromeOptions option = new ChromeOptions();
+            option.AddArguments("--headless");
             new DriverManager().SetUpDriver(new ChromeConfig());
             Console.WriteLine("Setup chrome driver...");
-            Driver = new ChromeDriver(); // option
+            Driver = new ChromeDriver(option);
             Thread.Sleep(2000);
         }
 
