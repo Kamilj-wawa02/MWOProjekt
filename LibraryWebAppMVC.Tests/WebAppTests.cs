@@ -17,6 +17,7 @@ namespace LibraryWebAppMVC.Tests
         [TestInitialize]
         public void Initialize()
         {
+            /*
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("--headless");
             //option.AddArgument("--remote-debugging-port=9222");
@@ -26,16 +27,17 @@ namespace LibraryWebAppMVC.Tests
             Driver = new ChromeDriver(option);
             Driver.Navigate().GoToUrl(APP_URL);
             Thread.Sleep(2000);
+            */
 
-
-            /*
+            
             FirefoxOptions options = new FirefoxOptions();
-            options.AddArguments("--headless", "--setpref=network.dns.blockDotOnion=false");
+            options.AddArgument("--marionette-port=0");
+            options.AddArgument("--headless");
             Console.WriteLine("Setup Firefox Driver...");
             Driver = new FirefoxDriver(options);
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            Thread.Sleep(2000);
-            */
+            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            //Thread.Sleep(2000);
+            
         }
 
         [TestCleanup]
@@ -47,10 +49,9 @@ namespace LibraryWebAppMVC.Tests
         [TestMethod]
         public void T01_CreateTest()
         {
-            Driver.Navigate().GoToUrl(APP_URL + "/Create");
-            Console.WriteLine("Aktualna data i czas: " + DateTime.Now.ToString());
             Thread.Sleep(2000);
-            Console.WriteLine("Aktualna data i czas2: " + DateTime.Now.ToString());
+            Driver.Navigate().GoToUrl(APP_URL + "/Create");
+            Thread.Sleep(2000);
             Console.WriteLine("Redirected to /create");
             Console.WriteLine("URL: ", Driver.Url.ToString());
             Console.WriteLine("Content: " + Driver.PageSource.ToString());
