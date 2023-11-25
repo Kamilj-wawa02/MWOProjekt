@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWebAppMVC.Client", "LibraryWebAppMVC\LibraryWebAppMVC.Client.csproj", "{38E2EE45-CE99-414C-B5A2-49C42D3AC584}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWebAppMVC.Tests", "LibraryWebAppMVC.Tests\LibraryWebAppMVC.Tests.csproj", "{CA52629C-BD77-449E-84E7-BF3AD7127B5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWebAppMVC.Tests", "LibraryWebAppMVC.Tests\LibraryWebAppMVC.Tests.csproj", "{CA52629C-BD77-449E-84E7-BF3AD7127B5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
