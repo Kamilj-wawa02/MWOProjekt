@@ -10,34 +10,32 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  run-program-and-tests:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --configuration Release --no-restore
+
     - name: Set executable permissions
       run: |
-        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0
-        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0/selenium-manager/linux/selenium-manager
+        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0
+        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0/selenium-manager/linux/selenium-manager
 
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Setup .NET for test
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 7.0.x
-    - name: Restore dependencies for test
-      run: dotnet restore
-    - name: Run tests in the background
-      run: dotnet test --no-restore --verbosity normal
+    - name: Run the program
+      run: /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Release/net7.0/YourProgramName
+
+    - name: Test
+      run: dotnet test --verbosity normal
