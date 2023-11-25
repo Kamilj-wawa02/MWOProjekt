@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Qd5hx8a+ESlK7NtuxYwp4ATkr9Xn8usEItzm0w4UZERV5rCfsBrjXnuQjG7NZXuUSELNb8RvY1ZdDBr99jLMw==",
+  "dgSpecHash": "blggd4BngTnqq8yix/6mtD8Os2uxRiYdVgprlaOqTKpHXa6viziRFTPiM/jUJu+4igTDUJDKaSVaTqXptij85g==",
   "success": true,
-  "projectFilePath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj",
+  "projectFilePath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamil\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\kamil\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

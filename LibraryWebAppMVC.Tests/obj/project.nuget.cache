@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yq9ridDr+UnDLQtEg2gPA3qKWc7NBSXLS1XSFV1dI2RLsPwk47XpfA7QUogI8a+jkVmkkNwfor/z+XRv+Hcc1w==",
+  "dgSpecHash": "sk4OJn7U5fJq6lhdSXAkgbe3Z4v8a2nMZcqLz533IywDXBkl47/78lYOlj454Za40PUVVUNSNW1Fp3GUIBnl5Q==",
   "success": true,
-  "projectFilePath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj",
+  "projectFilePath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamil\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\kamil\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

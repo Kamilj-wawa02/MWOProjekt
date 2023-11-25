@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj": {}
+    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj": {
+    "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj",
+        "projectUniqueName": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj",
         "projectName": "LibraryWebAppMVC.Tests",
-        "projectPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj",
+        "projectPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC.Tests\\LibraryWebAppMVC.Tests.csproj",
         "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC\\LibraryWebAppMVC.Tests\\obj\\",
+        "outputPath": "D:\\Projekty\\Studia\\MWOProjekt\\LibraryWebAppMVC.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
