@@ -19,7 +19,7 @@ namespace LibraryWebAppMVC.Tests
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("--headless");
             //option.AddArgument("--remote-debugging-port=9222");
-            option.AddArgument("--whitelisted-ips=\"\"");
+            option.AddArgument("--whitelisted-ips=\" \"");
             new DriverManager().SetUpDriver(new ChromeConfig());
             Console.WriteLine("Setup chrome driver...");
             Driver = new ChromeDriver(option);
