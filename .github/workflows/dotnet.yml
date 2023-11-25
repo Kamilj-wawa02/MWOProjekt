@@ -15,14 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: Install dependencies
+    - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Set executable permissions
+      run: |
+        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0
+        chmod 777 /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC.Tests/bin/Debug/net6.0/selenium-manager/linux/selenium-manager
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --verbosity normal
