@@ -1,9 +1,5 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Interactions;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 
 namespace LibraryWebAppMVC.Tests
@@ -17,27 +13,12 @@ namespace LibraryWebAppMVC.Tests
         [TestInitialize]
         public void Initialize()
         {
-            /*
-            ChromeOptions option = new ChromeOptions();
-            option.AddArguments("--headless");
-            //option.AddArgument("--remote-debugging-port=9222");
-            //option.AddArgument("--whitelisted-ips");
-            new DriverManager().SetUpDriver(new ChromeConfig());
-            Console.WriteLine("Setup chrome Driver...");
-            Driver = new ChromeDriver(option);
-            Driver.Navigate().GoToUrl(APP_URL);
-            Thread.Sleep(2000);
-            */
-
-            
             FirefoxOptions options = new FirefoxOptions();
             options.AddArgument("--marionette-port=0");
             options.AddArgument("--headless");
             options.AcceptInsecureCertificates = true;
             Console.WriteLine("Setup Firefox Driver...");
             Driver = new FirefoxDriver(options);
-            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            //Thread.Sleep(2000);
             
         }
 
@@ -50,7 +31,6 @@ namespace LibraryWebAppMVC.Tests
         [TestMethod]
         public void T01_CreateTest()
         {
-            Thread.Sleep(2000);
             Driver.Navigate().GoToUrl(APP_URL + "/Create");
             Thread.Sleep(2000);
             Console.WriteLine("Redirected to /create");
