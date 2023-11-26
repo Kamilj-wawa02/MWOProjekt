@@ -104,7 +104,7 @@ namespace LibraryWebAppMVC.Tests
                     Driver.FindElement(By.XPath("//*[contains(text(),'" + "TestTitle" + "')]")));
             
             // Added to test
-            //Assert.Fail();
+            Assert.Fail();
         }
 
     }
