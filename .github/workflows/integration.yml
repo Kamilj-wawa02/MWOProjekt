@@ -33,3 +33,18 @@ jobs:
 
     - name: Test
       run: dotnet test --verbosity normal
+
+    - name: Create Bug Workitem on job failure
+      uses: stefanstranger/azuredevops-bug-action@1.1
+      if: failure()
+      with:
+        OrganizationName: "01169565mwo"
+        PAT: "PAT"
+        ProjectName: "mwo"
+        AreaPath: "mwo"
+        IterationPath: "mwo"
+        GithubToken: "GithubToken"
+        WorkflowFileName: "integration.yml"
+      env:
+        PAT: ${{ secrets.PAT }}
+        GithubToken: ${{ secrets.githubtoken }}
