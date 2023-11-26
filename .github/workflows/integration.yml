@@ -40,9 +40,9 @@ jobs:
       with:
         OrganizationName: "01169565mwo"
         PAT: "PAT"
-        ProjectName: "mwo"
-        AreaPath: "mwo"
-        IterationPath: "mwo"
+        ProjectName: "mwo_scrum"
+        AreaPath: "mwo_scrum"
+        IterationPath: "mwo_scrum"
         GithubToken: "GithubToken"
         WorkflowFileName: "integration.yml"
       env:
