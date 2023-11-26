@@ -15,10 +15,23 @@ namespace LibraryWebAppMVC.Tests
         {
             FirefoxOptions options = new FirefoxOptions();
             options.AddArgument("--marionette-port=0");
-            //options.AddArgument("--headless");
+            if (IsRunningInGithubActions())
+            {
+                options.AddArgument("--headless");
+            }
             options.AcceptInsecureCertificates = true;
             Console.WriteLine("Setup Firefox Driver...");
             Driver = new FirefoxDriver(options);            
+        }
+
+        private bool IsRunningInGithubActions()
+        {
+            string githubActions = Environment.GetEnvironmentVariable("GITHUB_ACTIONS");
+            if (!string.IsNullOrEmpty(githubActions) && githubActions.Equals("true", StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+            return false;
         }
 
         [TestCleanup]
