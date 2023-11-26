@@ -18,8 +18,7 @@ namespace LibraryWebAppMVC.Tests
             options.AddArgument("--headless");
             options.AcceptInsecureCertificates = true;
             Console.WriteLine("Setup Firefox Driver...");
-            Driver = new FirefoxDriver(options);
-            
+            Driver = new FirefoxDriver(options);            
         }
 
         [TestCleanup]
