@@ -15,7 +15,7 @@ namespace LibraryWebAppMVC.Tests
         {
             FirefoxOptions options = new FirefoxOptions();
             options.AddArgument("--marionette-port=0");
-            options.AddArgument("--headless");
+            //options.AddArgument("--headless");
             options.AcceptInsecureCertificates = true;
             Console.WriteLine("Setup Firefox Driver...");
             Driver = new FirefoxDriver(options);            
