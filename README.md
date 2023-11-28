@@ -193,7 +193,8 @@ jobs:
 ## Konfiguracja integracji z Azure DevOps
 
 Aby odpowiednio skonfigurować integrację z Azure DevOps musiałem uzyskać **PAT**, czyli Personal Access Token pozwalający nam na przeprowadzanie działań w projekcie Azure DevOps.
-![Formularz tworzenia PAT](./images/PAT-form.png)
+
+<img src="./images/PAT-form.png" width="40%" height="40%" alt="Formularz tworzenia PAT">
 
 Następnie uzyskany token dodałem do sekretów mojego repozytorium.
 ![Dodanie PAT do repozytorim](./images/github-new-secret.png)
