@@ -1,6 +1,6 @@
 # Projekt na metodyki wytwarzania oprogramowania 
 
-Celem projektu było utworzenie i konfiguracja pipeline'a **CI/CD** z wykorzystaniem **Github Actions** oraz integracja z **Azure DevOps** wykorzystując do tego REST API.
+Celem projektu było utworzenie i konfiguracja pipeline'a **continuous integration** z wykorzystaniem **Github Actions** oraz integracja z **Azure DevOps** wykorzystując do tego REST API.
 
 Napisany przeze mnie skrypt testuje poprawność wykonanych testów UI w **Selenium** dla mojej aplikacji webowej napisanej w **C#** i implementującej wzorzec **MVC**. W przypadku niepowodzenia procesu testowania, zostaje zgłaszany nowy workitem (Bug) w Azure DevOps.
 
@@ -197,12 +197,23 @@ Aby odpowiednio skonfigurować integrację z Azure DevOps musiałem uzyskać **P
 <img src="./images/PAT-form.png" width="40%" height="40%" alt="Formularz tworzenia PAT">
 
 Następnie uzyskany token dodałem do sekretów mojego repozytorium.
+
 ![Dodanie PAT do repozytorim](./images/github-new-secret.png)
 
 Kolejnym krokiem było wygenerowanie tokenu Github, co pozwoli nam na dostęp do Github Actions i sprawdzania napotkanych błędów podczas wykonywania workflow.
+
 ![Dodanie PAT do repozytorim](./images/github-new-githubtoken.png)
 
 Po dodaniu tokenu Github, w moim repozytorium znajdują się 2 sekrety zawierające tokeny wymagane do przeprowadzenia integracji Github Actions z Azure DevOps.
-![Dodanie PAT do repozytorim](./images/github-secrets.png)
+
+<img src="./images/github-secrets.png" width="60%" height="60%" alt="Dodanie PAT do repozytorim">
+
+Przykładowy bug utworzony w DevOps został załączony poniżej.
+
+![Dodanie PAT do repozytorim](./images/devops-bug.png)
+
+## Działanie utworzonego workflow
+
+Film z prezentacją wideo mojego projektu został dodany do repozytorium jako plik **showcase.mp4**.
 
 
