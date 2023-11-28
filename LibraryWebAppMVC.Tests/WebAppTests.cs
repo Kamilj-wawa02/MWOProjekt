@@ -102,6 +102,8 @@ namespace LibraryWebAppMVC.Tests
             Thread.Sleep(1000);
             Assert.ThrowsException<OpenQA.Selenium.NoSuchElementException>(() =>
                     Driver.FindElement(By.XPath("//*[contains(text(),'" + "TestTitle" + "')]")));
+
+            //Assert.Fail();
         }
 
     }
