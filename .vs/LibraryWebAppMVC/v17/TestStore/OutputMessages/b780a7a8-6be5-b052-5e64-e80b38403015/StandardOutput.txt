@@ -63,7 +63,7 @@ Content: <html lang="en"><head>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary">
             </div>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8OzX3kFX1Q9Et4FpY_kTmv5Af1r7buI8N5MHauhG-ApE5W76PLYYvnsheAP7zR8fD4dsTEr4Ry3wXrwbdmIpdQUWjYaL2W2-VY9_uGxzPevJLQfh6GjVE_Nft4he2EDUf1Y7ERtCUd9d0Q8_5zPHzWU"></form>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8OzX3kFX1Q9Et4FpY_kTmv6ZUdOoOM--C8i30gV6d4uQe-PjQK_4MgYO24zEZYx54lXLA8gIwP6bCoW9AIq92m9stEj4S4cx1DnB1tuqeXJREWXchWGPMSqPifpy3bjIL-fU-4Zri75hUmVMiZUNVI8"></form>
     </div>
 </div>
 
@@ -89,7 +89,7 @@ Content: <html lang="en"><head>
 
 
 <!-- Visual Studio Browser Link -->
-<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="5ff90d616b0941eb81528f4b28dcdb0c" data-requestmappingfromserver="false" data-connecturl="http://localhost:52010/734f88fcd2424cedac3cbfb195f9a430/browserLink"></script>
+<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="0010427cf70c43f9a423f3cfe5d7969f" data-requestmappingfromserver="false" data-connecturl="http://localhost:52010/734f88fcd2424cedac3cbfb195f9a430/browserLink"></script>
 <!-- End Browser Link -->
 
 <script src="/_framework/aspnetcore-browser-refresh.js"></script>
