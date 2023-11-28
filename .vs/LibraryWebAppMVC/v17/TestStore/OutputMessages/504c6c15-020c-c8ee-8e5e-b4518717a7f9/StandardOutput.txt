@@ -1,0 +1,97 @@
+Setup Firefox Driver...
+Redirected to /create
+URL: 
+Content: <html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create - LibraryWebAppMVC</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0">
+    <link rel="stylesheet" href="/LibraryWebAppMVC.styles.css">
+</head>
+<body>
+    <header>
+        <nav b-l5t5nhoh34="" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div b-l5t5nhoh34="" class="container-fluid">
+                <a class="navbar-brand" href="/">LibraryWebAppMVC</a>
+                <button b-l5t5nhoh34="" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-l5t5nhoh34="" class="navbar-toggler-icon"></span>
+                </button>
+                <div b-l5t5nhoh34="" class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul b-l5t5nhoh34="" class="navbar-nav flex-grow-1">
+                        <li b-l5t5nhoh34="" class="nav-item">
+                            <a class="nav-link text-dark" href="/">Home</a>
+                        </li>
+                        <li b-l5t5nhoh34="" class="nav-item">
+                            <a class="nav-link text-dark" href="/Home/Privacy">Privacy</a>
+                        </li>
+                        <li b-l5t5nhoh34="" class="nav-item">
+                            <a class="nav-link text-dark" href="/LibraryAPI">Library</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div b-l5t5nhoh34="" class="container">
+        <main b-l5t5nhoh34="" role="main" class="pb-3">
+            
+
+<h1>Create</h1>
+
+<h4>Book</h4>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <form action="/LibraryAPI/Create" method="post" novalidate="novalidate">
+            
+            <div class="form-group">
+                <label class="control-label" for="Title">Title</label>
+                <input data-test-id="title" class="form-control" type="text" data-val="true" data-val-required="The Title field is required." id="Title" name="Title" value="">
+                <span class="text-danger field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="Author">Author</label>
+                <input data-test-id="author" class="form-control" type="text" data-val="true" data-val-required="The Author field is required." id="Author" name="Author" value="">
+                <span class="text-danger field-validation-valid" data-valmsg-for="Author" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="Description">Description</label>
+                <input data-test-id="description" class="form-control" type="text" data-val="true" data-val-required="The Description field is required." id="Description" name="Description" value="">
+                <span class="text-danger field-validation-valid" data-valmsg-for="Description" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary">
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8OzX3kFX1Q9Et4FpY_kTmv5Af1r7buI8N5MHauhG-ApE5W76PLYYvnsheAP7zR8fD4dsTEr4Ry3wXrwbdmIpdQUWjYaL2W2-VY9_uGxzPevJLQfh6GjVE_Nft4he2EDUf1Y7ERtCUd9d0Q8_5zPHzWU"></form>
+    </div>
+</div>
+
+<div>
+    <a href="/LibraryAPI">Back to List</a>
+</div>
+
+
+        </main>
+    </div>
+
+    <footer b-l5t5nhoh34="" class="border-top footer text-muted">
+        <div b-l5t5nhoh34="" class="container">
+            © 2023 - LibraryWebAppMVC - <a href="/Home/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="5ff90d616b0941eb81528f4b28dcdb0c" data-requestmappingfromserver="false" data-connecturl="http://localhost:52010/734f88fcd2424cedac3cbfb195f9a430/browserLink"></script>
+<!-- End Browser Link -->
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+</body></html>
