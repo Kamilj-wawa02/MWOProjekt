@@ -19,6 +19,8 @@ Testy zostały napisane z wykorzystaniem **MSTest** i są przeprowadzane przy po
 - argument **--headless** - przeglądarka zostanie uruchomiona w trybie bez użycia interfejsu użytkownika - argument jest niezbędny do uruchomienia testów w Github Actions i zostaje dodany do parametrów startowych jedynie w tym środowisku, w przypadku standardowego uruchomienia na komputerze, zostanie przedstawiony interfejs użytkownika
 - ustawiono **AcceptInsecureCertificates** na wartość **true**, co pozwali uniknąć problemów z certyfikatami w uruchomionym środowisku.
 
+Nazwy testów zaczynają się od T0X, aby ustawić kolejność ich wykonywania w przypadku używanego środowiska.
+
 ```csharp
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -129,8 +131,64 @@ namespace LibraryWebAppMVC.Tests
     }
 }
 ```
-Nazwy testów zaczynają się od T0X, aby ustawić kolejność ich wykonywania w przypadku używanego środowiska.
 
 ## Github Actions
 
+Napisany workflow w Github Actions zostaje uruchomiony w przypadku wykonania operacji **pull request** lub **merge**. Zostaje uruchomione środowisko gotowe do uruchomienia testów aplikacji.
+
+Przy tworzeniu poniższego workflow napotkałem na problemy z odmową dostępu w przypadku próby uruchomienia programu. Użyłem więc polecenia **chmod** aby nadać pełne uprawnienia w przypadku wszystkich podfolderów w katalogu głównym projektu. Następnie zostaje uruchomiony zbudowany wcześniej program z wykorzystaniem polecenia **nohup** (no hang up), dzięki któremu proces całego skryptu nie zostanie zatrzymany. Teraz zostają wykonane wszystkie testy. W przypadku niepowodzenia któregoś z testów, zostaje utworzony nowy workitem w Azure DevOps - bug ze znacznikiem czasu zdarzenia. Aby uzyskać tę funkcjonalność posłużyłem się skryptem dostępnym na Github Actions użytkownika stefanstranger.
+
+
+
+```yaml
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  run-program-and-tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Set executable permissions
+      run: |
+        chmod 777 -R /home/runner/work/MWOProjekt/MWOProjekt
+
+    - name: Run the program
+      run: nohup dotnet /home/runner/work/MWOProjekt/MWOProjekt/LibraryWebAppMVC/bin/Release/net7.0/LibraryWebAppMVC.Client.dll &
+
+    - name: Test
+      run: dotnet test --verbosity normal
+
+    - name: Create Bug Workitem on job failure
+      uses: stefanstranger/azuredevops-bug-action@1.1
+      if: failure()
+      with:
+        OrganizationName: "01169565mwo"
+        PAT: "PAT"
+        ProjectName: "mwo_scrum"
+        AreaPath: "mwo_scrum"
+        IterationPath: "mwo_scrum"
+        GithubToken: "GithubToken"
+        WorkflowFileName: "integration.yml"
+      env:
+        PAT: ${{ secrets.PAT }}
+        GithubToken: ${{ secrets.githubtoken }}
+```
+
+Aby odpowiednio skonfigurować integrację z Azure DevOps musiałem uzyskać **PAT**, czyli Personal Access Token. Możemy go utworzyć na stronie Azure DevOps:
 
