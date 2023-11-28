@@ -208,7 +208,7 @@ Po dodaniu tokenu Github, w moim repozytorium znajdują się 2 sekrety zawieraj�
 
 <img src="./images/github-secrets.png" width="60%" height="60%" alt="Dodanie PAT do repozytorim">
 
-Przykładowy bug utworzony w DevOps został załączony poniżej.
+Przykładowy bug utworzony w DevOps został zaprezentowany poniżej.
 
 ![Dodanie PAT do repozytorim](./images/devops-bug.png)
 
