@@ -190,5 +190,18 @@ jobs:
         GithubToken: ${{ secrets.githubtoken }}
 ```
 
-Aby odpowiednio skonfigurować integrację z Azure DevOps musiałem uzyskać **PAT**, czyli Personal Access Token. Możemy go utworzyć na stronie Azure DevOps:
+## Konfiguracja integracji z Azure DevOps
+
+Aby odpowiednio skonfigurować integrację z Azure DevOps musiałem uzyskać **PAT**, czyli Personal Access Token pozwalający nam na przeprowadzanie działań w projekcie Azure DevOps.
+![Formularz tworzenia PAT](./images/PAT-form.png)
+
+Następnie uzyskany token dodałem do sekretów mojego repozytorium.
+![Dodanie PAT do repozytorim](./images/github-new-secret.png)
+
+Kolejnym krokiem było wygenerowanie tokenu Github, co pozwoli nam na dostęp do Github Actions i sprawdzania napotkanych błędów podczas wykonywania workflow.
+![Dodanie PAT do repozytorim](./images/github-new-githubtoken.png)
+
+Po dodaniu tokenu Github, w moim repozytorium znajdują się 2 sekrety zawierające tokeny wymagane do przeprowadzenia integracji Github Actions z Azure DevOps.
+![Dodanie PAT do repozytorim](./images/github-secrets.png)
+
 
