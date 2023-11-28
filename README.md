@@ -216,4 +216,5 @@ Przykładowy bug utworzony w DevOps został zaprezentowany poniżej.
 
 Film z prezentacją wideo mojego projektu został dodany do repozytorium jako plik **showcase.mp4**.
 
+![Film](./presentation.mp4)
 
