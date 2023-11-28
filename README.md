@@ -214,7 +214,9 @@ Przykładowy bug utworzony w DevOps został zaprezentowany poniżej.
 
 ## Działanie utworzonego workflow
 
-Film z prezentacją wideo mojego projektu został dodany do repozytorium jako plik **showcase.mp4**.
+Film z prezentacją wideo mojego projektu został dodany do repozytorium jako plik **presentation.mp4**.
+
+https://github.com/Kamilj-wawa02/MWOProjekt/assets/95346542/ff6dacda-d2c4-401a-bce9-d2a4e20bb79d
 
 
 
