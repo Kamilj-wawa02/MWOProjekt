@@ -136,7 +136,7 @@ namespace LibraryWebAppMVC.Tests
 
 Napisany workflow w Github Actions zostaje uruchomiony w przypadku wykonania operacji **pull request** lub **merge**. Zostaje uruchomione środowisko gotowe do uruchomienia testów aplikacji.
 
-Przy tworzeniu poniższego workflow napotkałem na problemy z odmową dostępu w przypadku próby uruchomienia programu. Użyłem więc polecenia **chmod** aby nadać pełne uprawnienia w przypadku wszystkich podfolderów w katalogu głównym projektu. Następnie zostaje uruchomiony zbudowany wcześniej program z wykorzystaniem polecenia **nohup** (no hang up), dzięki któremu proces całego skryptu nie zostanie zatrzymany. Teraz zostają wykonane wszystkie testy. W przypadku niepowodzenia któregoś z testów, zostaje utworzony nowy workitem w Azure DevOps - bug ze znacznikiem czasu zdarzenia. Aby uzyskać tę funkcjonalność posłużyłem się skryptem dostępnym na Github Actions użytkownika stefanstranger.
+Przy tworzeniu poniższego workflow napotkałem na problemy z odmową dostępu w przypadku próby uruchomienia programu. Użyłem więc polecenia **chmod** aby nadać pełne uprawnienia w przypadku wszystkich podfolderów w katalogu głównym projektu. Następnie zostaje uruchomiony zbudowany wcześniej program z wykorzystaniem polecenia **nohup** (no hang up), dzięki któremu proces całego skryptu nie zostanie zatrzymany. Teraz zostają wykonane wszystkie testy. W przypadku niepowodzenia któregoś z testów, zostaje utworzony nowy workitem w Azure DevOps - bug ze znacznikiem czasu zdarzenia. Aby uzyskać tę funkcjonalność posłużyłem się skryptem dostępnym na Github Actions użytkownika stefanstranger, który wykorzystuje REST API w komunikacji z Azure DevOps.
 
 
 
